@@ -1,0 +1,19 @@
+/* Logo */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  @include font(26px, 700, 1.19);
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.footer__logo {
+  color: #ffffff;
+}

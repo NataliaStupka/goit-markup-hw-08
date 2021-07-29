@@ -1,0 +1,48 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--white-color);
+    background-color: var(--accent-color);
+  }
+}
+
+.social-list__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social-list_light {
+  fill: var(--icon-color);
+  background-color: #ffffff;
+}
+.social-list_dark {
+  fill: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* ПРИСОЕДЕНЯЙТЕСЬ - footer */
+.social-footer {
+  width: 206px;
+}
+
+.social-footer__title {
+  margin-bottom: 20px;
+  font-style: normal;
+  @include font(14px, 700, 1.14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
