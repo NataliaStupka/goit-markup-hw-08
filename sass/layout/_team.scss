@@ -2,52 +2,48 @@
 
 .team {
   background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  color: var(--title-text-color);
-  @include font(36px, 700, 1.17);
+  @include font(28px, 700, 1.18);
   text-align: center;
   letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
-.team__list {
-  display: flex;
-  align-items: center;
-}
-
-.team__item {
-  &:not(:last-child) {
-    margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .team__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .team__card {
-  background: #ffffff;
+  background: var(--white-color);
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.team__badge {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  padding-right: 32px;
+// посмотреть не заминить ли в team__card
+.team__img {
+  margin-bottom: 30px;
 }
-
+.team__badge {
+  padding-bottom: 24px;
+}
 .team__name {
   margin-bottom: 10px;
 
-  color: var(--title-text-color);
   @include font(16px, 500, 1.19);
   text-align: center;
   letter-spacing: 0.03em;
-}
 
+  color: var(--title-text-color);
+}
 .team__profession {
   margin-bottom: 16px;
   color: var(--primery-text-color);
@@ -55,5 +51,100 @@
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+
+    align-items: center;
+  }
+  .team__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+    @include font(36px, 700, 1.17);
+  }
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+
+    align-items: center;
+  }
+  .team__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 120px) / 4);
+  }
+  .team__badge {
+    padding-bottom: 30px;
+  }
+}
+
+// основные стили
+// .team {
+//   background-color: #f5f4fa;
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+
+// .team__title {
+//   margin-bottom: 50px;
+
+//   color: var(--title-text-color);
+//   @include font(36px, 700, 1.17);
+//   text-align: center;
+//   letter-spacing: 0.03em;
+// }
+// .team__list {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .team__item {
+//   &:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
+
+// .team__card {
+//   background: #ffffff;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//   border-radius: 0px 0px 4px 4px;
+// }
+
+// .team__badge {
+//   padding-top: 30px;
+//   padding-bottom: 30px;
+//   padding-left: 32px;
+//   padding-right: 32px;
+// }
+
+// .team__name {
+//   margin-bottom: 10px;
+
+//   color: var(--title-text-color);
+//   @include font(16px, 500, 1.19);
+//   text-align: center;
+//   letter-spacing: 0.03em;
+// }
+
+// .team__profession {
+//   margin-bottom: 16px;
+//   color: var(--primery-text-color);
+//   @include font(16px, 400, 1.19);
+//   text-align: center;
+//   letter-spacing: 0.03em;
+// }
 
 /* ========== END TEAM ========== */
