@@ -1,8 +1,9 @@
 /* ========== MAIN ========== */
 
-// пофиксить при расмотрении моб-десктоп секция приимущества не центрируется?на десктопе, при меньшей 480 фонкартинка героя уменьшить но в центре??
+// убрать width и height, bg size cover иили четкий размер; пофиксить при расмотрении моб-десктоп секция приимущества не центрируется?на десктопе, при меньшей 480 фонкартинка героя уменьшить но в центре??
 .hero {
-  // width: 480px;
+  width: 480px;
+  height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
   margin-left: auto;
@@ -12,6 +13,7 @@
   background-color: var(--background-footer-hero);
   background-repeat: no-repeat;
   background-position: center;
+  // background-size: cover;
   background-size: 480px 400px;
   text-align: center;
 }
@@ -43,9 +45,10 @@
 @media screen and (min-width: 768px) {
   .hero {
     width: 768px;
+    height: 400px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../../imeges/hero/Header-tablet.jpg');
-    background-size: 768px;
+    background-size: 768px 400px;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
@@ -61,11 +64,12 @@
 @media screen and (min-width: 1200px) {
   .hero {
     width: 1600px;
+    height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../../imeges/hero/Header-desktop.jpg');
-    background-size: 1600px;
+    background-size: 1600px 600px;
   }
   .hero__title {
     max-width: 696px;
