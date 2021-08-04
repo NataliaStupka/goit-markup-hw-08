@@ -41,12 +41,18 @@
 .social-footer {
   width: 206px;
 }
-
+@media screen and (max-width: 767px) {
+  .social-footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .social-footer__title {
   margin-bottom: 20px;
   font-style: normal;
   @include font(14px, 700, 1.14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: #ffffff;
 }

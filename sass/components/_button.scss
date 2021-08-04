@@ -32,7 +32,10 @@
 
   width: 200px;
   height: 50px;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  // на 1200+
+  // margin-left: 12px;
 }
 .footer__icon-send {
   width: 24px;
