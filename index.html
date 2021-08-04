@@ -129,33 +129,68 @@
           <h2 class="profile__titel">Чем мы занимаемся</h2>
           <ul class="profile__list list">
             <li class="profile__item">
-              <img
-                class="profile__img"
-                src="./imeges/studio-page/box1.jpg"
-                alt="блок1"
-                width="370"
-                height="294"
-              />
+              <picture class="picture">
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./imeges/profile/desktop-box1.webp    1x,
+                    ./imeges/profile/desktop-box1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./imeges/profile/desktop-box1.jpg    1x,
+                    ./imeges/profile/desktop-box1@2x.jpg 2x
+                  "
+                />
+                <img class="profile__img" src="#" alt="блок1" width="370" height="294" />
+              </picture>
               <p class="profile__label">Десктопные приложения</p>
             </li>
+
             <li class="profile__item">
-              <img
-                class="profile__img"
-                src="./imeges/studio-page/box2.jpg"
-                alt="блок2"
-                width="370"
-                height="294"
-              />
+              <picture class="picture">
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./imeges/profile/desktop-box2.webp    1x,
+                    ./imeges/profile/desktop-box2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./imeges/profile/desktop-box2.jpg    1x,
+                    ./imeges/profile/desktop-box2@2x.jpg 2x
+                  "
+                />
+                <img class="profile__img" src="#" alt="блок2" width="370" height="294" />
+              </picture>
               <p class="profile__label">Мобильные приложения</p>
             </li>
+
             <li class="profile__item">
-              <img
-                class="profile__img"
-                src="./imeges/studio-page/box3.jpg"
-                alt="блок3"
-                width="370"
-                height="294"
-              />
+              <picture class="picture">
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./imeges/profile/desktop-box3.webp    1x,
+                    ./imeges/profile/desktop-box3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./imeges/profile/desktop-box3.jpg    1x,
+                    ./imeges/profile/desktop-box3@2x.jpg 2x
+                  "
+                />
+                <img class="profile__img" src="#" alt="блок3" width="370" height="294" />
+              </picture>
               <p class="profile__label">Дизайнерские решения</p>
             </li>
           </ul>
