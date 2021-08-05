@@ -8,11 +8,147 @@
 .header {
   padding-top: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #ececec;
+  // border-bottom: 1px solid #ececec;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// бургер-меню
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    fill: #000000;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+.mobile-menu__container {
+  position: relative;
+  padding-top: 48px;
+  padding-left: 40px;
+}
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+.nav-list {
+  margin-bottom: 302px;
+}
+.nav-list__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.nav-list__link {
+  @include font(40px, 500, 1.18);
+  letter-spacing: 0.02em;
+  color: #212121;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu__contact {
+  margin-bottom: 64px;
+}
+.mobile-menu__contact-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mobile-menu__contact-tel {
+  @include font(34px, 500, 1.18);
+  letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.mobile-menu__contact-mail {
+  @include font(24px, 500, 1.17);
+  letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.mobile-menu__social-list {
+  display: flex;
+}
+.mobile-menu__social-item {
+  position: relative;
+}
+.mobile-menu__social-link {
+  color: #2196f3;
+  @include font(18px, 500, 1.22);
+  letter-spacing: 0.02em;
+  margin-right: 20px;
+
+  &::after {
+    position: absolute;
+    bottom: 10px;
+    content: '';
+
+    width: 22px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
 }
 
 // 768+
 @media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+
   .header {
     padding-top: 22px;
     padding-bottom: 22px;

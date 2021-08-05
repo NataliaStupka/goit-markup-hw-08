@@ -127,7 +127,6 @@ body {
     font-weight: 700;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: #000000;
   }
   .header__logo {
     margin-right: 93px;
@@ -146,10 +145,156 @@ body {
 .header {
   padding-top: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.burger-btn__icon {
+  width: 40px;
+  height: 40px;
+  fill: #000000;
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.close-btn__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu__container {
+  position: relative;
+  padding-top: 48px;
+  padding-left: 40px;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+.nav-list {
+  margin-bottom: 302px;
+}
+
+.nav-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.nav-list__link {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.nav-list__link:hover, .nav-list__link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu__contact {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__contact-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__contact-tel {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+}
+
+.mobile-menu__contact-tel:hover, .mobile-menu__contact-tel:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu__contact-mail {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+}
+
+.mobile-menu__contact-mail:hover, .mobile-menu__contact-mail:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu__social-list {
+  display: flex;
+}
+
+.mobile-menu__social-item {
+  position: relative;
+}
+
+.mobile-menu__social-link {
+  color: #2196f3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  margin-right: 20px;
+}
+
+.mobile-menu__social-link::after {
+  position: absolute;
+  bottom: 10px;
+  content: '';
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
 }
 
 @media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
   .header {
     padding-top: 22px;
     padding-bottom: 22px;
