@@ -353,8 +353,6 @@ body {
 
 /* ========== MAIN ========== */
 .hero {
-  width: 480px;
-  height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
   margin-left: auto;
@@ -363,7 +361,7 @@ body {
   background-color: var(--background-footer-hero);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px 400px;
+  background-size: cover;
   text-align: center;
 }
 
@@ -390,10 +388,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
-    height: 400px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-tablet.jpg");
-    background-size: 768px 400px;
+    background-size: cover;
   }
 }
 
@@ -405,12 +401,10 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1600px;
-    height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-desktop.jpg");
-    background-size: 1600px 600px;
+    background-size: cover;
   }
   .hero__title {
     max-width: 696px;
