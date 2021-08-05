@@ -1,8 +1,9 @@
 /* Logo */
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include font(26px, 700, 1.19);
+  @include font(24px, 700, 1.17);
   letter-spacing: 0.03em;
+  text-align: center;
   color: #000000;
 }
 
@@ -10,10 +11,23 @@
   color: var(--accent-color);
 }
 
-.header__logo {
-  margin-right: 93px;
-}
-
 .footer__logo {
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-family: 'Raleway', sans-serif;
+    @include font(26px, 700, 1.19);
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+  .header__logo {
+    margin-right: 93px;
+  }
 }
