@@ -1162,18 +1162,21 @@ body {
 .project__item {
   background: #ffffff;
   border: 1px solid #eeeeee;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project__item:hover, .project__item:focus {
-  border: 1px solid #eeeeee;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 @media screen and (max-width: 767px) {
   .project__item:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+
+.project__link {
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project__link:hover, .project__link:focus {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project__card {
@@ -1219,9 +1222,7 @@ body {
   color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
   width: 100%;
-  height: 100%;
   overflow: auto;
-  padding: 77px 24px;
   transform: translateY(100%);
   transition: transform 500ms linear;
 }
@@ -1229,6 +1230,18 @@ body {
 .project__link:hover .project__overlay,
 .project__link:focus .project__overlay {
   transform: translateY(0%);
+}
+
+@media screen and (max-width: 767px) {
+  .project__overlay {
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .project__overlay {
+    padding: 10px 10px;
+  }
 }
 
 @media screen and (min-width: 768px) {
