@@ -302,6 +302,7 @@ body {
   width: 1px;
   height: 22px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-color: #afb1b8;
 }
 
 .mobile-menu__social-link {
@@ -1235,12 +1236,6 @@ body {
 @media screen and (max-width: 767px) {
   .project__overlay {
     padding: 77px 24px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .project__overlay {
-    padding: 10px 10px;
   }
 }
 
