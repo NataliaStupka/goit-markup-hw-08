@@ -47,6 +47,24 @@
     fill: var(--accent-color);
   }
 }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-top: -15px;
+
+    align-items: center;
+  }
+  .clients__item {
+    margin-left: 15px;
+    margin-top: 15px;
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .clients__link {
+    width: auto;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .clients__item {

@@ -230,6 +230,14 @@ body {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 479px) {
+  .nav-list__link {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.18;
+  }
+}
+
 .mobile-menu__contact {
   margin-top: auto;
   margin-bottom: 64px;
@@ -251,6 +259,14 @@ body {
   color: #2196f3;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-menu__contact-tel {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.18;
+  }
+}
+
 .mobile-menu__contact-mail {
   font-size: 24px;
   font-weight: 500;
@@ -261,6 +277,14 @@ body {
 
 .mobile-menu__contact-mail:hover, .mobile-menu__contact-mail:focus {
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-menu__contact-mail {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.18;
+  }
 }
 
 .mobile-menu__social-list {
@@ -286,6 +310,14 @@ body {
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-menu__social-link {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -611,7 +643,7 @@ body {
 }
 
 .dignity__icon-conteiner {
-  width: 450px;
+  max-width: 450px;
   height: 120px;
   display: flex;
   align-items: center;
@@ -902,6 +934,24 @@ body {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-top: -15px;
+    align-items: center;
+  }
+  .clients__item {
+    margin-left: 15px;
+    margin-top: 15px;
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .clients__link {
+    width: auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .clients__item {
     flex-basis: calc((100% - 90px) / 3);
@@ -1003,8 +1053,13 @@ body {
   color: var(--white-color);
 }
 
+@media screen and (max-width: 479px) {
+  .footer__form {
+    text-align: center;
+  }
+}
+
 .footer__form-input {
-  width: 450px;
   height: 50px;
   background-color: var(--background-footer-hero);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1014,6 +1069,18 @@ body {
   outline: none;
   margin-bottom: 20px;
   padding-left: 16px;
+}
+
+@media screen and (max-width: 479px) {
+  .footer__form-input {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer__form-input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1270,7 +1337,6 @@ body {
 @media screen and (max-width: 479px) {
   .modal {
     width: 90vw;
-    height: 609px;
   }
 }
 

@@ -90,6 +90,10 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (max-width: 479px) {
+    @include font(24px, 500, 1.18);
+  }
 }
 
 .mobile-menu__contact {
@@ -110,6 +114,9 @@
   &:focus {
     color: #2196f3;
   }
+  @media screen and (max-width: 479px) {
+    @include font(24px, 500, 1.18);
+  }
 }
 .mobile-menu__contact-mail {
   @include font(24px, 500, 1.17);
@@ -118,6 +125,9 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @media screen and (max-width: 479px) {
+    @include font(18px, 500, 1.18);
   }
 }
 .mobile-menu__social-list {
@@ -140,6 +150,9 @@
   color: #2196f3;
   @include font(18px, 500, 1.22);
   letter-spacing: 0.02em;
+  @media screen and (max-width: 479px) {
+    @include font(12px, 400, 1.16);
+  }
 }
 
 // 768+
