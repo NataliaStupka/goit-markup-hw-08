@@ -211,10 +211,6 @@ body {
   right: 15px;
 }
 
-.nav-list {
-  margin-bottom: 302px;
-}
-
 .nav-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -232,6 +228,7 @@ body {
 }
 
 .mobile-menu__contact {
+  margin-top: auto;
   margin-bottom: 64px;
 }
 
@@ -244,11 +241,11 @@ body {
   font-weight: 500;
   line-height: 1.18;
   letter-spacing: 0.02em;
-  color: var(--primery-text-color);
+  color: #2196f3;
 }
 
 .mobile-menu__contact-tel:hover, .mobile-menu__contact-tel:focus {
-  color: var(--accent-color);
+  color: #2196f3;
 }
 
 .mobile-menu__contact-mail {
@@ -268,7 +265,16 @@ body {
 }
 
 .mobile-menu__social-item {
-  position: relative;
+  display: flex;
+  margin-right: 10px;
+}
+
+.mobile-menu__social-item:not(:last-child)::after {
+  content: '';
+  margin-left: 10px;
+  width: 1px;
+  height: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mobile-menu__social-link {
@@ -277,16 +283,6 @@ body {
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  margin-right: 20px;
-}
-
-.mobile-menu__social-link::after {
-  position: absolute;
-  bottom: 10px;
-  content: '';
-  width: 22px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
 }
 
 @media screen and (min-width: 768px) {
@@ -541,7 +537,7 @@ body {
   padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-mobile.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../imeges/hero/Header-mobile.jpg");
   background-color: var(--background-footer-hero);
   background-repeat: no-repeat;
   background-position: center;
@@ -551,7 +547,7 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px), (min-resolution: 192dpi) and (min-width: 280px), (min-resolution: 2dppx) and (min-width: 280px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-mobile@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../imeges/hero/Header-mobile@2x.jpg");
   }
 }
 
@@ -572,14 +568,14 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-tablet.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../imeges/hero/Header-tablet.jpg");
     background-size: cover;
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../imeges/hero/Header-tablet@2x.jpg");
   }
 }
 
@@ -587,7 +583,7 @@ body {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-desktop.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../imeges/hero/Header-desktop.jpg");
     background-size: cover;
   }
   .hero__title {
@@ -600,7 +596,7 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/imeges/hero/Header-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../imeges/hero/Header-desktop@2x.jpg");
   }
 }
 
@@ -1206,8 +1202,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   /* по умолчанию
   opacity: 1;
@@ -1226,8 +1222,6 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 528px;
-  height: 580px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1270,6 +1264,27 @@ body {
   border-color: var(--accent-color);
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 90vw;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+
 /* Modal form */
 .modal-form {
   display: flex;
@@ -1279,8 +1294,7 @@ body {
 .modal-form__head {
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.15;
-  font-style: normal;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -1292,7 +1306,6 @@ body {
   font-weight: 400;
   line-height: 1.17;
   margin-bottom: 10px;
-  font-style: normal;
   letter-spacing: 0.01em;
   color: var(--primery-text-color);
 }
@@ -1360,13 +1373,12 @@ body {
 }
 
 .modal-form__checkbox-label {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.71;
+  line-height: 1.17;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-style: normal;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
 }
@@ -1426,5 +1438,18 @@ body {
 
 .modal-form__button:focus {
   outline: 1px solid #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__head {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  .modal-form__checkbox-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+  }
 }
 /*# sourceMappingURL=main.css.map */

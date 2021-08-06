@@ -4,8 +4,7 @@
   flex-direction: column;
 }
 .modal-form__head {
-  @include font(20px, 700, 1.15);
-  font-style: normal;
+  @include font(20px, 700, 1.5);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -15,7 +14,6 @@
 .modal-form__field {
   @include font(12px, 400, 1.17);
   margin-bottom: 10px;
-  font-style: normal;
   letter-spacing: 0.01em;
   color: var(--primery-text-color);
 }
@@ -83,11 +81,10 @@
 }
 
 .modal-form__checkbox-label {
-  @include font(14px, 400, 1.71);
+  @include font(12px, 400, 1.17);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-style: normal;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
 
@@ -145,5 +142,14 @@
 
   &:focus {
     outline: 1px solid #2196f3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__head {
+    @include font(20px, 700, 1.15);
+  }
+  .modal-form__checkbox-label {
+    @include font(14px, 400, 1.71);
   }
 }
