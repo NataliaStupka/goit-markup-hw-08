@@ -205,6 +205,7 @@ body {
   height: 100%;
   position: relative;
   padding-top: 48px;
+  padding-bottom: 48px;
   padding-left: 40px;
 }
 
@@ -555,7 +556,6 @@ body {
 
 .social-footer__title {
   margin-bottom: 20px;
-  font-style: normal;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
@@ -563,6 +563,12 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .social-footer__title {
+    text-align: left;
+  }
 }
 
 /* ========== MAIN ========== */
@@ -687,14 +693,12 @@ body {
 @media screen and (min-width: 768px) {
   .dignity__list {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
   }
   .dignity__item {
     width: 354px;
-    height: 251px;
     margin-left: 30px;
     margin-top: 30px;
     flex-basis: calc((100% - 60px) / 2);
@@ -727,7 +731,6 @@ body {
   }
   .dignity__item {
     width: 270px;
-    height: 251px;
     margin-left: 30px;
     margin-top: 30px;
     flex-basis: calc((100% - 120px) / 4);
@@ -861,6 +864,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .team__title {
     margin-bottom: 50px;
     font-size: 36px;
